@@ -64,21 +64,21 @@ text = Path("docs/releases/v0.1.0.md").read_text().replace(
     "Prepared release candidate; the maintainer owns commits, tagging and GitHub publication.",
     "Released batch-serving portfolio milestone.",
 )
-base = "https://github.com/FlashPD/realtime-ml-platform/blob/v0.1.0/docs/releases/"
+base = "https://github.com/pushyanthd/realtime-ml-platform/blob/v0.1.0/docs/releases/"
 text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)",
               lambda m: f"[{m[1]}]({urljoin(base, m[2])})", text)
 Path("dist/v0.1.0-github-notes.md").write_text(text)
 PYNOTES
 git push -u origin HEAD
 git push origin v0.1.0
-gh release create v0.1.0 --repo FlashPD/realtime-ml-platform --verify-tag \
+gh release create v0.1.0 --repo pushyanthd/realtime-ml-platform --verify-tag \
   --title "v0.1.0 — Batch training and online serving" \
   --notes-file dist/v0.1.0-github-notes.md \
   dist/tripml-batch-v0.1.0-artifacts.tar.gz \
   dist/tripml-batch-v0.1.0-artifacts.tar.gz.sha256 \
   dist/tripml-batch-v0.1.0-source.tar.gz \
   dist/tripml-batch-v0.1.0-source.tar.gz.sha256
-gh release view v0.1.0 --repo FlashPD/realtime-ml-platform --web
+gh release view v0.1.0 --repo pushyanthd/realtime-ml-platform --web
 ```
 
 The generated notes mark the release as published and resolve documentation links against the

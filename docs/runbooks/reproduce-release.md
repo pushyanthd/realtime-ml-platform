@@ -8,7 +8,7 @@ rebuild steps. No command here depends on the author's absolute filesystem paths
 ## Fresh source and dependencies
 
 ```bash
-git clone https://github.com/FlashPD/realtime-ml-platform.git
+git clone https://github.com/pushyanthd/realtime-ml-platform.git
 cd realtime-ml-platform
 # After the maintainer publishes it:
 git checkout v0.1.0
@@ -37,7 +37,7 @@ maintainer's `dist/` directory. After publication:
 
 ```bash
 mkdir -p dist
-gh release download v0.1.0 --repo FlashPD/realtime-ml-platform \
+gh release download v0.1.0 --repo pushyanthd/realtime-ml-platform \
   --pattern 'tripml-batch-v0.1.0-artifacts.tar.gz*' --dir dist
 ```
 
